@@ -4,13 +4,24 @@
 .menu {
   background-color: bisque;
   display: grid;
-  grid-template-rows: 60px auto;
-  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px auto;
+  grid-template-columns: 35% 65%;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+  }
+
   @include element("item") {
     color: white;
 
     @include element("image") {
-      font-size: 20px;
+      width: 100%;
     }
     @include element("companyname") {
       font-size: 20px;
@@ -20,19 +31,49 @@
 
 .accordion {
   justify-self: end;
-  align-self: flex-end;
+  align-self: center;
   /* @include modifier("visibility") {
     display: none;
   }
  */
 
+  @include modifier("active") {
+    grid-column: span 2;
+    justify-self: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+  }
+
   @include modifier("margin") {
     margin: 0 5% 5% 0;
   }
   @include element("menu") {
-    grid-column: span 2;
-    justify-self: center;
-    @include element("item") {
+    display: none;
+    @include modifier("active") {
     }
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      width: 25%;
+      justify-content: space-around;
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      width: 25%;
+      justify-content: space-around;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
