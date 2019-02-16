@@ -1,3 +1,16 @@
-body {
-  background-color: bisque;
+/// Block Element
+/// parameter - Element's name
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+/// Block Modifier
+/// parameter - Modifier's name
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
 }
