@@ -24,3 +24,13 @@ a:hover {
       font-size: 20px; }
     .menu__item__companyname {
       font-size: 30px; }
+
+.accordion {
+  background-color: blue;
+  /* @include modifier("visibility") {
+    display: none;
+  }
+ */ }
+  .accordion__menu {
+    grid-column: span 2;
+    justify-self: center; }
