@@ -4,7 +4,7 @@
 .menu {
   background-color: bisque;
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 60px auto;
   grid-template-columns: 50% 50%;
   @include element("item") {
     color: white;
@@ -13,18 +13,22 @@
       font-size: 20px;
     }
     @include element("companyname") {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 }
 
 .accordion {
-  background-color: blue;
-
+  justify-self: end;
+  align-self: flex-end;
   /* @include modifier("visibility") {
     display: none;
   }
  */
+
+  @include modifier("margin") {
+    margin: 0 5% 5% 0;
+  }
   @include element("menu") {
     grid-column: span 2;
     justify-self: center;

@@ -16,21 +16,24 @@ a:hover {
 .menu {
   background-color: bisque;
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 60px auto;
   grid-template-columns: 50% 50%; }
   .menu__item {
     color: white; }
     .menu__item__image {
       font-size: 20px; }
     .menu__item__companyname {
-      font-size: 30px; }
+      font-size: 20px; }
 
 .accordion {
-  background-color: blue;
+  justify-self: end;
+  align-self: flex-end;
   /* @include modifier("visibility") {
     display: none;
   }
  */ }
+  .accordion--margin {
+    margin: 0 5% 5% 0; }
   .accordion__menu {
     grid-column: span 2;
     justify-self: center; }
