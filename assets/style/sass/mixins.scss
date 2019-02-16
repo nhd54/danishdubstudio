@@ -1,6 +1,7 @@
+@import "./variables";
+
 /// Block Element
 /// parameter - Element's name
-
 @mixin element($element) {
   &__#{$element} {
     @content;
@@ -11,6 +12,18 @@
 /// parameter - Modifier's name
 @mixin modifier($modifier) {
   &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
     @content;
   }
 }
