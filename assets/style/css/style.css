@@ -17,7 +17,7 @@ a:hover {
   background-color: bisque;
   display: grid;
   grid-template-rows: 100px auto;
-  grid-template-columns: 35% 65%; }
+  grid-template-columns: 55% 45%; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .menu {
       display: flex;
@@ -26,12 +26,25 @@ a:hover {
     .menu {
       display: flex;
       justify-content: space-around; } }
+  .menu__image {
+    font-size: 4em;
+    background-color: #3498db;
+    border-radius: 50%;
+    padding: 10px; }
   .menu__item {
-    color: white; }
-    .menu__item__image {
-      width: 100%; }
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .menu__item__companyname {
-      font-size: 20px; }
+      font-size: 20px;
+      margin-left: 10px; }
+      .menu__item__companyname--smalltext {
+        color: #ccd6e5;
+        font-size: 16px;
+        font-family: Open Sans;
+        font-weight: 800;
+        float: right; }
 
 .accordion {
   justify-self: end;

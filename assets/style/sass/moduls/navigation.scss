@@ -5,7 +5,7 @@
   background-color: bisque;
   display: grid;
   grid-template-rows: 100px auto;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 55% 45%;
 
   @include tablet {
     display: flex;
@@ -17,14 +17,30 @@
     justify-content: space-around;
   }
 
-  @include element("item") {
-    color: white;
+  @include element("image") {
+    font-size: 4em;
+    background-color: $primary-color;
+    border-radius: 50%;
+    padding: 10px;
+  }
 
-    @include element("image") {
-      width: 100%;
-    }
+  @include element("item") {
+    color: $light-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @include element("companyname") {
       font-size: 20px;
+      margin-left: 10px;
+
+      @include modifier("smalltext") {
+        color: $second-color;
+        font-size: 16px;
+        font-family: Open Sans;
+        font-weight: 800;
+        float: right;
+      }
     }
   }
 }
