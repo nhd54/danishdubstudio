@@ -2,10 +2,13 @@
 @import "../mixins";
 
 .menu {
-  background-color: bisque;
+  /*  background-color: bisque; */
   display: grid;
   grid-template-rows: 100px auto;
+  width: 100vw;
   grid-template-columns: 55% 45%;
+  position: absolute;
+  z-index: 5;
 
   @include tablet {
     display: flex;
@@ -63,7 +66,10 @@
   }
 
   @include modifier("margin") {
-    margin: 0 5% 5% 0;
+    margin: 0 25% 0 0;
+    color: $light-text;
+    background-color: $primary-color;
+    padding: 10px;
   }
   @include element("menu") {
     display: none;

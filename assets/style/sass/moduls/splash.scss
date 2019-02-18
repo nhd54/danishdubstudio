@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../mixins";
+
+.splash {
+  background-image: url("../../media/image/controlRoom.jpg");
+  background-image: url("../../media/image/controlRoom.jpg"),
+    linear-gradient(#eb01a5, #d13531);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(2px);
+  background-position: center;
+  height: 60vh;
+}
