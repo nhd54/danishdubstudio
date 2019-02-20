@@ -2,12 +2,25 @@
 @import "../mixins";
 
 .splash {
-  background-image: url("../../media/image/controlRoom.jpg");
-  background-image: url("../../media/image/controlRoom.jpg"),
-    linear-gradient(#eb01a5, #d13531);
+  background-image: url("../../media/image/ControlRoom1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-position: center;
-  height: 60vh;
+  height: 85vh;
+
+  @include element("heading") {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0px;
+    width: 65%;
+
+    @include desktop {
+      font-size: 50px;
+    }
+  }
 }
