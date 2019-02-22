@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../mixins";
+
+@include tablet {
+  .inline-content {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@include desktop {
+  .inline-content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.sticker {
+  display: grid;
+  width: 80%;
+  margin: 50px auto;
+  grid-gap: 20px;
+
+  @include tablet {
+    width: 88%;
+    margin: 50px;
+  }
+  @include desktop {
+    width: 88%;
+    margin: 50px;
+  }
+
+  @include element("icon") {
+    font-size: 120px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    padding: 50px;
+    justify-self: center;
+  }
+
+  @include element("heading") {
+    color: white;
+    font-size: 40px;
+  }
+
+  @include element("text") {
+    color: $second-color;
+  }
+
+  @include element("button") {
+    justify-self: start;
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid $primary-color;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
