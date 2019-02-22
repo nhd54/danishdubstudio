@@ -15,7 +15,11 @@
     justify-self: center;
   }
 
+  @include element("heading") {
+  }
+
   @include element("text") {
+    color: $second-color;
   }
 
   @include element("button") {
