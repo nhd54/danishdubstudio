@@ -1,11 +1,35 @@
 @import "../variables";
 @import "../mixins";
 
+@include tablet {
+  .inline-content {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@include desktop {
+  .inline-content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .sticker {
   display: grid;
   width: 80%;
-  margin: 10px auto;
+  margin: 50px auto;
   grid-gap: 20px;
+
+  @include tablet {
+    width: 88%;
+    margin: 50px;
+  }
+  @include desktop {
+    width: 88%;
+    margin: 50px;
+  }
 
   @include element("icon") {
     font-size: 120px;
@@ -16,6 +40,8 @@
   }
 
   @include element("heading") {
+    color: white;
+    font-size: 40px;
   }
 
   @include element("text") {
@@ -39,5 +65,9 @@
     text-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: $primary-color;
+    }
   }
 }

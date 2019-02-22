@@ -6,7 +6,8 @@
   list-style-type: none; }
 
 body {
-  background-color: #3f3e45; }
+  background-color: #3f3e45;
+  overflow-x: hidden; }
 
 a {
   color: #ccd6e5;
@@ -123,17 +124,40 @@ h1 {
       .splash__heading {
         font-size: 50px; } }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .inline-content {
+    display: flex;
+    justify-content: space-around; } }
+
+@media (min-width: 1024px) {
+  .inline-content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto; } }
+
 .sticker {
   display: grid;
   width: 80%;
-  margin: 10px auto;
+  margin: 50px auto;
   grid-gap: 20px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sticker {
+      width: 88%;
+      margin: 50px; } }
+  @media (min-width: 1024px) {
+    .sticker {
+      width: 88%;
+      margin: 50px; } }
   .sticker__icon {
     font-size: 120px;
     background-color: #3498db;
     border-radius: 50%;
     padding: 50px;
     justify-self: center; }
+  .sticker__heading {
+    color: white;
+    font-size: 40px; }
   .sticker__text {
     color: #ccd6e5; }
   .sticker__button {
@@ -152,4 +176,7 @@ h1 {
     cursor: pointer;
     text-align: center;
     -webkit-appearance: none;
-    -moz-appearance: none; }
+    -moz-appearance: none;
+    transition: 0.3s; }
+    .sticker__button:hover {
+      background-color: #3498db; }
